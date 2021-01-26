@@ -1,0 +1,23 @@
+{
+  "name": "majorly-hyper",
+  "version": "0.1",
+  "description": "Joel's Hyper Theme",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joelamajors/majorly-hyper.git"
+  },
+  "keywords": [
+    "hyper",
+    "hyper-theme"
+  ],
+  "author": "Joel Majors <joelamajors@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joelamajors/majorly-hyper/issues"
+  },
+  "homepage": "https://github.com/joelamajors/majorly-hyper"
+}
