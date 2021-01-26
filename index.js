@@ -1,16 +1,16 @@
 'use strict';
-const foregroundColor = '#383a42';
-const red = '#e45649';
-const green = '#50a14f';
-const yellow = '#c18401';
-const blue = '#4078f2';
+const fgColor = '#383a42';
+const red     = '#e45649';
+const green   = '#50a14f';
+const yellow  = '#c18401';
+const blue    = '#4078f2';
 const magenta = '#a626a4';
-const cyan = '#0184bc';
-const white = '#a0a1a7';
-const lightBlack = '#696c77';
+const cyan    = '#0184bc';
+const white   = '#a0a1a7';
+const ltBlack = '#696c77';
 
 exports.decorateConfig = config => {
-  const backgroundColor = config.enableVibrancy ? 'transparent' : '#fafafa';
+  const bgColor = config.enableVibrancy ? 'transparent' : '#fafafa';
   let tabListStyles = '';
 
   if (process.platform === 'darwin') {
@@ -34,12 +34,12 @@ exports.decorateConfig = config => {
   }
 
   const decoratedConfig = Object.assign({}, config, {
-    backgroundColor,
-    foregroundColor,
+    bgColor,
+    fgColor,
     borderColor: 'transparent',
     cursorColor: '#526eff',
     colors: {
-      black: foregroundColor,
+      black: fgColor,
       red,
       green,
       yellow,
@@ -47,14 +47,14 @@ exports.decorateConfig = config => {
       magenta,
       cyan,
       white,
-      lightBlack,
+      ltBlack,
       lightRed: red,
       lightGreen: green,
       lightYellow: yellow,
       lightBlue: blue,
       lightMagenta: magenta,
       lightCyan: cyan,
-      lightWhite: backgroundColor
+      lightWhite: bgColor
     },
     css: `
       ${config.css || ''}
@@ -65,7 +65,7 @@ exports.decorateConfig = config => {
       }
       .header_shape,
       .header_appTitle {
-        color: ${foregroundColor};
+        color: ${fgColor};
       }
       .splitpane_divider {
         background-color: rgba(0, 0, 0, .12) !important;
